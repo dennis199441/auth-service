@@ -23,9 +23,10 @@ class role_required(object):
         @wraps(f)
         def wrapped_func(*args, **kwargs):
             current_user = get_jwt_identity()
-            user_roles = current_user["roles"]
-            for user_role in user_roles:
-                if user_role in self.roles:
-                    return f(*args, **kwargs)
+            if current_user:
+                user_roles = current_user["roles"]
+                for user_role in user_roles:
+                    if user_role in self.roles:
+                        return f(*args, **kwargs)
             raise NoAuthorizationError("Insufficient role")
         return wrapped_func
