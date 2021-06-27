@@ -1,8 +1,8 @@
 import sys
 from flask import Flask, jsonify, request, Blueprint
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from ..decorators.role_required import role_required
-from ..services.user_service import activate_user, deactivate_user, change_user_password, get_user_info, get_user_info_by_email, get_all_users, create_new_user, update_username
+from app.decorators.role_required import role_required
+from app.services.user_service import activate_user, deactivate_user, change_user_password, get_user_info, get_user_info_by_email, get_all_users, create_new_user, update_username
 
 user = Blueprint("user", __name__)
 

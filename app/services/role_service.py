@@ -1,6 +1,6 @@
-from ..entities.entity import Session
-from ..entities.user_roles import UserRole, UserRoleSchema
-from ..entities.role import Role, RoleSchema
+from app.entities.entity import Session
+from app.entities.user_roles import UserRole, UserRoleSchema
+from app.entities.role import Role, RoleSchema
 
 
 def get_role_by_name(role_name):

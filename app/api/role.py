@@ -1,10 +1,10 @@
 import sys
 from flask import Flask, jsonify, request, Blueprint
 from flask_jwt_extended import jwt_required
-from ..decorators.role_required import role_required
-from ..entities.entity import Session
-from ..entities.role import Role, RoleSchema
-from ..services.role_service import get_all_roles, get_role_by_name, create_new_role, delete_existing_role
+from app.decorators.role_required import role_required
+from app.entities.entity import Session
+from app.entities.role import Role, RoleSchema
+from app.services.role_service import get_all_roles, get_role_by_name, create_new_role, delete_existing_role
 
 role = Blueprint("role", __name__)
 

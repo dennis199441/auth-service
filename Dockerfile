@@ -12,4 +12,4 @@ COPY . /usr/src/app
 
 ENTRYPOINT ["python3"]
 
-CMD ["main.py"]
+CMD ["main.py", "runserver"]

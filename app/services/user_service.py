@@ -1,7 +1,7 @@
 from datetime import datetime
 from passlib.hash import pbkdf2_sha256 as sha256
-from ..entities.entity import Session
-from ..entities.user import User, UserSchema
+from app.entities.entity import Session
+from app.entities.user import User, UserSchema
 import sys
 
 

@@ -1,9 +1,9 @@
 from flask_jwt_extended import (create_access_token, create_refresh_token)
 from passlib.hash import pbkdf2_sha256 as sha256
-from ..entities.entity import Session
-from ..entities.user import User, UserSchema
-from ..services.user_service import get_user_info, update_last_login
-from ..services.role_service import get_user_roles, get_role_by_id
+from app.entities.entity import Session
+from app.entities.user import User, UserSchema
+from app.services.user_service import get_user_info, update_last_login
+from app.services.role_service import get_user_roles, get_role_by_id
 
 
 def authenticate(username, password):

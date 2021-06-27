@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, request, Blueprint
 from flask_jwt_extended import jwt_required
-from ..decorators.role_required import role_required
-from ..entities.entity import Session
-from ..entities.user_roles import UserRole, UserRoleSchema
-from ..services.user_service import get_user_info
-from ..services.role_service import get_user_roles, grant_role, revoke_role
+from app.decorators.role_required import role_required
+from app.entities.entity import Session
+from app.entities.user_roles import UserRole, UserRoleSchema
+from app.services.user_service import get_user_info
+from app.services.role_service import get_user_roles, grant_role, revoke_role
 
 user_role = Blueprint("user_role", __name__)
 
